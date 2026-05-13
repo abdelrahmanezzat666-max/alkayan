@@ -3,7 +3,7 @@ import express from "express";
 import rateLimit from "express-rate-limit";
 import helmet from "helmet";
 import morgan from "morgan";
-import { corsOrigins, env } from "./config/env.js";
+import { env } from "./config/env.js";
 import { authRoutes } from "./modules/auth/auth.routes.js";
 import { cityRoutes } from "./modules/cities/city.routes.js";
 import { permissionRoutes } from "./modules/permissions/permission.routes.js";
@@ -14,14 +14,17 @@ import { errorHandler, notFoundHandler } from "./middlewares/error-handler.js";
 export const app = express();
 
 app.use(helmet());
+
 app.use(
   cors({
-    origin: corsOrigins,
+    origin: true,
     credentials: true
   })
 );
+
 app.use(express.json({ limit: "1mb" }));
 app.use(morgan(env.NODE_ENV === "production" ? "combined" : "dev"));
+
 app.use(
   "/api",
   rateLimit({
