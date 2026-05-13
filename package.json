@@ -1,6 +1,6 @@
 {
   "name": "al-kayan-real-estate",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "private": true,
   "workspaces": [
     "backend",
@@ -15,6 +15,6 @@
   },
   "devDependencies": {
     "concurrently": "^9.1.2",
- 
+    "typescript": "^5.7.2"
   }
 }
