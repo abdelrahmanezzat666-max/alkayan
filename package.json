@@ -1,6 +1,6 @@
 {
   "name": "al-kayan-real-estate",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "private": true,
   "workspaces": [
     "backend",
@@ -14,7 +14,7 @@
     "seed": "npm --workspace backend run seed"
   },
   "devDependencies": {
-    "concurrently": "^9.1.2"
+    "concurrently": "^9.1.2",
     "typescript": "^5.0.0"
   }
 }
