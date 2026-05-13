@@ -15,5 +15,6 @@
   },
   "devDependencies": {
     "concurrently": "^9.1.2"
+    "typescript": "^5.0.0"
   }
 }
